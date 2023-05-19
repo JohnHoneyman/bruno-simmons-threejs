@@ -27,6 +27,8 @@ gradientTexture.minFilter = THREE.NearestFilter;
 gradientTexture.magFilter = THREE.NearestFilter;
 gradientTexture.generateMipmaps = false;
 
+//For more env map textures, we can download them in HDRIHaven
+// Then convert it to cube maps here: https://matheowis.github.io/HDRI-to-CubeMap/
 const environmentMapTexture = cubeTextureLoader.load([
   "/textures/environmentMaps/4/px.png",
   "/textures/environmentMaps/4/nx.png",
