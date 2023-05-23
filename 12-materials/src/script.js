@@ -76,8 +76,8 @@ const scene = new THREE.Scene();
 // material.shininess = 100;
 // material.specular = new THREE.Color(0xff0000);
 
-// const material = new THREE.MeshToonMaterial();
-// material.gradientMap = gradientTexture;
+const material = new THREE.MeshToonMaterial();
+material.gradientMap = gradientTexture;
 
 // TODO: 1:03:00
 
@@ -97,15 +97,14 @@ const scene = new THREE.Scene();
 // material.alphaMap = doorAlphaTexture;
 // material.side = THREE.DoubleSide;
 
-const material = new THREE.MeshStandardMaterial();
-material.metalness = 0.7;
-material.roughness = 0.2;
-material.envMap = environmentMapTexture;
-
-gui.add(material, "metalness").min(0).max(1).step(0.0001);
-gui.add(material, "roughness").min(0).max(1).step(0.0001);
-gui.add(material, "aoMapIntensity").min(0).max(10).step(0.0001);
-gui.add(material, "displacementScale").min(0).max(1).step(0.0001);
+// const material = new THREE.MeshStandardMaterial();
+// material.metalness = 0.7;
+// material.roughness = 0.2;
+// material.envMap = environmentMapTexture;
+// gui.add(material, "metalness").min(0).max(1).step(0.0001);
+// gui.add(material, "roughness").min(0).max(1).step(0.0001);
+// gui.add(material, "aoMapIntensity").min(0).max(10).step(0.0001);
+// gui.add(material, "displacementScale").min(0).max(1).step(0.0001);
 
 const sphere = new THREE.Mesh(new THREE.SphereBufferGeometry(0.5, 64, 64), material);
 

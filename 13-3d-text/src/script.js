@@ -36,7 +36,7 @@ fontLoader.load(
   "fonts/helvetiker_regular.typeface.json",
 
   (font) => {
-    const textGeometry = new TextGeometry("Hello ThreeJS!", {
+    const textGeometry = new TextGeometry("Hello 98Labs!", {
       font: font,
       size: 0.5,
       height: 0.2,
@@ -70,12 +70,12 @@ fontLoader.load(
 
     // const donutGeometry = new THREE.TorusBufferGeometry(0.3, 0.2, 20, 45);
     const donutGeometry = new THREE.ConeBufferGeometry(0.3, 1, 16);
-    // const donutMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture });
+    const donutMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture });
     // TODO: We can combine text and donut material into one material for optimization
 
     for (let i = 0; i < 400; i++) {
-      //   const donut = new THREE.Mesh(donutGeometry, donutMaterial);
-      const donut = new THREE.Mesh(donutGeometry, material);
+      const donut = new THREE.Mesh(donutGeometry, donutMaterial);
+      // const donut = new THREE.Mesh(donutGeometry, material);
 
       donut.position.x = (Math.random() - 0.5) * 20;
       donut.position.y = (Math.random() - 0.5) * 20;
