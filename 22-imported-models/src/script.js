@@ -46,10 +46,10 @@ gltfLoader.load(
     // }
 
     // NOTE: 3rd Way
-    // scene.add(gltf.scene);
+    // scene.add(gltf.scene);cd
 
     mixer = new THREE.AnimationMixer(gltf.scene);
-    const action = mixer.clipAction(gltf.animations[0]); // TODO: Index changes animation
+    const action = mixer.clipAction(gltf.animations[2]); // TODO: Index changes animation
 
     action.play();
 
