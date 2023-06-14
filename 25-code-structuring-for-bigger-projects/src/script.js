@@ -34,7 +34,10 @@ const experience = new Experience(document.querySelector("canvas.webgl"));
 //  */
 // const updateAllMaterials = () => {
 //   scene.traverse((child) => {
-//     if (child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial) {
+//     if (
+//       child instanceof THREE.Mesh &&
+//       child.material instanceof THREE.MeshStandardMaterial
+//     ) {
 //       // child.material.envMap = environmentMap
 //       child.material.envMapIntensity = debugObject.envMapIntensity;
 //       child.material.needsUpdate = true;
@@ -62,7 +65,12 @@ const experience = new Experience(document.querySelector("canvas.webgl"));
 // scene.environment = environmentMap;
 
 // debugObject.envMapIntensity = 0.4;
-// gui.add(debugObject, "envMapIntensity").min(0).max(4).step(0.001).onChange(updateAllMaterials);
+// gui
+//   .add(debugObject, "envMapIntensity")
+//   .min(0)
+//   .max(4)
+//   .step(0.001)
+//   .onChange(updateAllMaterials);
 
 // /**
 //  * Models
@@ -117,10 +125,30 @@ const experience = new Experience(document.querySelector("canvas.webgl"));
 // directionalLight.position.set(3.5, 2, -1.25);
 // scene.add(directionalLight);
 
-// gui.add(directionalLight, "intensity").min(0).max(10).step(0.001).name("lightIntensity");
-// gui.add(directionalLight.position, "x").min(-5).max(5).step(0.001).name("lightX");
-// gui.add(directionalLight.position, "y").min(-5).max(5).step(0.001).name("lightY");
-// gui.add(directionalLight.position, "z").min(-5).max(5).step(0.001).name("lightZ");
+// gui
+//   .add(directionalLight, "intensity")
+//   .min(0)
+//   .max(10)
+//   .step(0.001)
+//   .name("lightIntensity");
+// gui
+//   .add(directionalLight.position, "x")
+//   .min(-5)
+//   .max(5)
+//   .step(0.001)
+//   .name("lightX");
+// gui
+//   .add(directionalLight.position, "y")
+//   .min(-5)
+//   .max(5)
+//   .step(0.001)
+//   .name("lightY");
+// gui
+//   .add(directionalLight.position, "z")
+//   .min(-5)
+//   .max(5)
+//   .step(0.001)
+//   .name("lightZ");
 
 // /**
 //  * Sizes
@@ -148,7 +176,12 @@ const experience = new Experience(document.querySelector("canvas.webgl"));
 //  * Camera
 //  */
 // // Base camera
-// const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100);
+// const camera = new THREE.PerspectiveCamera(
+//   35,
+//   sizes.width / sizes.height,
+//   0.1,
+//   100
+// );
 // camera.position.set(6, 4, 8);
 // scene.add(camera);
 
