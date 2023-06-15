@@ -101,7 +101,7 @@ material.onBeforeCompile = (shader) => {
     `
       #include <beginnormal_vertex>
 
-      float angle = (position.y + uTime) * 0.9;
+      float angle = 1.0 - sin(position.y + uTime) * 0.4;
       mat2 rotateMatrix = get2dRotateMatrix(angle);
 
       objectNormal.xz = rotateMatrix * objectNormal.xz;
@@ -138,7 +138,7 @@ depthMaterial.onBeforeCompile = (shader) => {
     `
       #include <begin_vertex>
 
-      float angle = (position.y + uTime) * 0.9;
+      float angle = 1.0 - sin(position.y + uTime) * 0.4;
       mat2 rotateMatrix = get2dRotateMatrix(angle);
 
       transformed.xz = rotateMatrix * transformed.xz;
