@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "gsap": "^3.12.1",
-    "stats.js": "^0.17.0"
-  }
-}
