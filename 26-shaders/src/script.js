@@ -21,7 +21,8 @@ const scene = new THREE.Scene();
  * Textures
  */
 const textureLoader = new THREE.TextureLoader();
-const flagTexture = textureLoader.load("/textures/flag-french.jpg");
+// const flagTexture = textureLoader.load("/textures/flag-french.jpg");
+const flagTexture = textureLoader.load("/textures/flag-philippine.png");
 
 /**
  * Test mesh
@@ -38,7 +39,6 @@ for (let i = 0; i < count; i++) {
 
 geometry.setAttribute("aRandom", new THREE.BufferAttribute(randoms, 1));
 
-// TODO: 1:36:43
 // Material
 // const material = new THREE.RawShaderMaterial({
 const material = new THREE.ShaderMaterial({
@@ -53,11 +53,21 @@ const material = new THREE.ShaderMaterial({
     uTexture: { value: flagTexture },
   },
   //   wireframe: true ,
-  //   side: THREE.DoubleSide,
+  // side: THREE.DoubleSide,
 });
 
-gui.add(material.uniforms.uFrequency.value, "x").min(0).max(20).step(0.01).name("frequencyX");
-gui.add(material.uniforms.uFrequency.value, "y").min(0).max(20).step(0.01).name("frequencyY");
+gui
+  .add(material.uniforms.uFrequency.value, "x")
+  .min(0)
+  .max(20)
+  .step(0.01)
+  .name("frequencyX");
+gui
+  .add(material.uniforms.uFrequency.value, "y")
+  .min(0)
+  .max(20)
+  .step(0.01)
+  .name("frequencyY");
 
 // Mesh
 const mesh = new THREE.Mesh(geometry, material);
@@ -90,7 +100,12 @@ window.addEventListener("resize", () => {
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(
+  75,
+  sizes.width / sizes.height,
+  0.1,
+  100
+);
 camera.position.set(0.25, -0.25, 1);
 scene.add(camera);
 
