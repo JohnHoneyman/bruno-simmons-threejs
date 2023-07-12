@@ -16,13 +16,13 @@ import {
   useCubeTexture,
   useProgress,
   useGLTF,
-} from '@react-three/drei'
-import { useRef } from 'react'
+} from "@react-three/drei";
+import { useRef } from "react";
 
 export default function Experience() {
   //   const { camera, gl } = useThree()
-  const cube = useRef()
-  const sphere = useRef()
+  const cube = useRef();
+  const sphere = useRef();
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function Experience() {
         anchor={[0, 0, 0]}
         depthTest={false}
         lineWidth={4}
-        axisColors={['#9381ff', '#ff4d6d', '#7ae582']}
+        axisColors={["#9381ff", "#ff4d6d", "#7ae582"]}
         scale={100}
         fixed={true}
       >
@@ -96,17 +96,17 @@ export default function Experience() {
       <Float speed={5} floatIntensity={2}>
         <Text
           font="./bangers-v20-latin-regular.woff"
-          color={'black'}
+          color={"black"}
           fontSize={1}
           // position={[0, 2, 0]}
           position-y={2}
           // maxWidth={2}
           textAlign="center"
         >
-          MooNRakeR
+          98Labs
           {/* <meshNormalMaterial /> */}
         </Text>
       </Float>
     </>
-  )
+  );
 }
